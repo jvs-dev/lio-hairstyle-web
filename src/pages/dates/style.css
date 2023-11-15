@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --closed: #FF4A4A;
+    --marked: #4AFF9D;
+}
+
+
+.main__dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--light-gray);
+    padding: 40px;
+}
+
+.dates__h2 {
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 97.5%;
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--white);
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+}
+
+.dates__frame {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 4px 0px;
+}
+
+.dates__frame__div--days-hours {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div--days__p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--dark-gray);
+    width: 120px;
+    height: 60px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;    
+    margin: 0px 4px;
+    cursor: pointer;
+}
+
+.div--days__p.closed {
+    background: var(--closed);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div--days__p.closed::before {
+    content: 'Fechado';
+    color: var(--dark-gray);
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100.5%;
+}
+
+.div--days__p.open {    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div--days__p.open::before {
+    content: 'Livre';
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100.5%;
+}
+
+.div--days__p.marked {
+    background: var(--marked);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div--days__p.marked::before {
+    content: 'Marcado';
+    color: var(--dark-gray);
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100.5%;
+}
+
+.div--days__p.unavailable {
+    background: var(--light-gray);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+}
+.dates__agend {
+    width: 100%;
+}
+.dates__agend--mobile {
+    display: none;
+}

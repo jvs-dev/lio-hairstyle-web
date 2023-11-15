@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lio Hairstyle</title>
+    <link rel="shortcut icon" href="assets/296123107_122225713872532_7342779468138834687_n.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles/reset.css">
+    <link rel="stylesheet" href="src/styles/base.css">
+    <link rel="stylesheet" href="src/pages/home/style.css">
+    <link rel="stylesheet" href="src/components/header/style.css">
+    <link rel="stylesheet" href="src/pages/values/style.css">
+    <link rel="stylesheet" href="src/pages/location/styles.css">
+    <link rel="stylesheet" href="src/pages/experience/style.css">
+    <link rel="stylesheet" href="src/pages/follow/style.css">
+    <link rel="stylesheet" href="src/pages/dates/style.css">
+    <link rel="stylesheet" href="src/components/footer/style.css">
+    <link rel="stylesheet" href="src/components/buttons/burgerBtn/burgerBtn.css">
+    <link rel="stylesheet" href="src/components/mobileNav/mobileNav.css">
+    <link rel="stylesheet" href="src/components/loading/loading.css">
+
+    <link rel="stylesheet" href="src/script/mobile-config/mobile-config.css">
+</head>
+
+<body>
+    <main id="main">
+        <section class="main__loading" id="loadingSection">
+            <p class="header__name">Lio Hairstyle</p>
+            <div class="dot-spinner">
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+                <div class="dot-spinner__dot"></div>
+            </div>
+            <p class="loading__p" id="loadingP">Carregando...</p>
+        </section>
+        <header class="main__header" id="header">
+            <div class="header__div">
+                <img class="header__logo" src="assets/296123107_122225713872532_7342779468138834687_n.jpg" alt="">
+                <p class="header__name">Lio Hairstyle</p>
+            </div>
+            <nav class="header__nav">
+                <a class="header__a" href="#values-location-div">
+                    <div></div>Preços
+                </a>
+                <a class="header__a" href="#Sectiondates">
+                    <div></div>Hórarios
+                </a>
+                <a class="header__a" href="#values-location-div">
+                    <div></div>Localização
+                </a>
+                <a class="header__a" href="#instagramSection">
+                    <div></div>Contato
+                </a>
+                <a class="header__btn" href="">
+                    <div></div>Baixe o app
+                </a>
+            </nav>
+            <label class="buttons__burger" for="burger">
+                <input type="checkbox" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+        </header>
+        <nav class="main__mobileNav" id="mobileNav">
+            <a class="header__a mobileNav__a" href="#values-location-div">
+                <div></div>Preços
+            </a>
+            <a class="header__a mobileNav__a" href="#locationSection">
+                <div></div>Localização
+            </a>
+            <a class="header__a mobileNav__a" href="#Sectiondates">
+                <div></div>Hórarios
+            </a>
+            <a class="header__a mobileNav__a" href="#instagramSection">
+                <div></div>Contato
+            </a>
+            <a class="header__btn" href="">
+                <div></div>Baixe o app
+            </a>
+        </nav>
+        <section class="main__home">
+            <img class="home__background-img" src="assets/pexels-thgusstavo-santana-1813272.jpg" alt="" id="homeImg">
+            <div class="home__gradient"></div>
+            <h1 class="home__h1" id="homeText"></h1>
+            <a href="#" class="home__btn">fale conosco<ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <ion-icon class="home__arrowDown" name="chevron-down-outline"></ion-icon>
+        </section>
+        <div class="main__section-div" id="values-location-div">
+            <section class="main__values">
+                <h2 class="values__h2" data-aos="fade-right">Cortes</h2>
+                <ul class="values__ul" data-aos="fade-right">
+                    <li class="values__ul__li">Americano<span>$20</span></li>
+                    <li class="values__ul__li">VO<span>$25</span></li>
+                </ul>
+                <button class="values__btn" data-aos="fade-right">Ver Loja</button>
+            </section>
+            <section class="main__location" id="locationSection">
+                <iframe class="location__map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d364.23371755481116!2d-38.47774436180642!3d-12.872341925379468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71611e6f970d479%3A0xde619789c084bbd8!2sAv.%20Afr%C3%A2nio%20Peixoto%2C%208673%20-%20Praia%20Grande%2C%20Salvador%20-%20BA%2C%2040720-690!5e0!3m2!1spt-BR!2sbr!4v1695080408300!5m2!1spt-BR!2sbr"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location__background"></div>
+                <div class="location__div" data-aos="fade-left">
+                    <h2 class="location__h2"><ion-icon name="location-sharp"></ion-icon>Praia Grande</h2>
+                    <p class="location__p">Av. Afrânio Peixoto, 8673 - Praia Grande Salvador - BA 40720-690</p>
+                    <a class="location__a"
+                        href="https://www.google.com/maps/place/Av.+Afr%C3%A2nio+Peixoto,+8673+-+Praia+Grande,+Salvador+-+BA,+40720-690/@-12.872362,-38.477603,20z/data=!4m5!3m4!1s0x71611e6f970d479:0xde619789c084bbd8!8m2!3d-12.8723625!4d-38.4776031?hl=pt-BR&entry=ttu">Ver
+                        no mapa</a>
+                </div>
+                <div class="location__div" data-aos="fade-left">
+                    <h2 class="location__h2"><ion-icon name="call"></ion-icon>(71) 98798-6035</h2>
+                    <a class="location__a" href="">Entre em contato</a>
+                </div>
+                <div class="location__div" data-aos="fade-left">
+                    <h2 class="location__h2"><i class="bi bi-alarm"></i>aberto de Terça a domingo</h2>
+                    <p class="location__p">Terça a sexta: 08:00 - 19:00.<br>Sabado e domingo: 08:00 - 12:00</p>
+                </div>
+            </section>
+        </div>
+        <section class="main__experience">
+            <h2 class="experience__h2">Tudo para uma melhor<br><span>experiência</span></h2>
+            <div class="experience__div">
+                <article class="experience__article" data-aos="fade-right">
+                    <i class="bi bi-controller experience__article__icon"></i>
+                    <h3 class="experience__article__h3">lazer e diversão</h3>
+                    <p class="experience__article__p">Diversos jogos e musicas para aproveitar a espera</p>
+                </article>
+                <article class="experience__article" data-aos="fade-right">
+                    <i class="bi bi-house-heart-fill experience__article__icon"></i>
+                    <h3 class="experience__article__h3">muito mais Conforto</h3>
+                    <p class="experience__article__p">Ambiente agradavel, climatizado e decorado</p>
+                </article>
+                <article class="experience__article" data-aos="fade-right">
+                    <i class="bi bi-cup-hot-fill experience__article__icon"></i>
+                    <h3 class="experience__article__h3">refresque-se</h3>
+                    <p class="experience__article__p">Bebidas e drinks variados para você escolher</p>
+                </article>
+            </div>
+        </section>
+        <section class="main__dates" id="Sectiondates">
+            <h2 class="dates__h2">HorÁRIOS Disponiveis</h2>
+            <div class="dates__agend">
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p"></p>
+                        <p class="div--days__p" id="PROXTER">Terça</p>
+                        <p class="div--days__p" id="PROXQUA">Quarta</p>
+                        <p class="div--days__p" id="PROXQUI">Quinta</p>
+                        <p class="div--days__p" id="PROXSEX">Sexta</p>
+                        <p class="div--days__p" id="PROXSAB">Sábado</p>
+                        <p class="div--days__p" id="PROXDOM">Domingo</p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">08:00</p>
+                        <p class="div--days__p" id="TER08"></p>
+                        <p class="div--days__p" id="QUA08"></p>
+                        <p class="div--days__p" id="QUI08"></p>
+                        <p class="div--days__p" id="SEX08"></p>
+                        <p class="div--days__p" id="SAB08"></p>
+                        <p class="div--days__p" id="DOM08"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">09:00</p>
+                        <p class="div--days__p" id="TER09"></p>
+                        <p class="div--days__p" id="QUA09"></p>
+                        <p class="div--days__p" id="QUI09"></p>
+                        <p class="div--days__p" id="SEX09"></p>
+                        <p class="div--days__p" id="SAB09"></p>
+                        <p class="div--days__p" id="DOM09"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">10:00</p>
+                        <p class="div--days__p" id="TER10"></p>
+                        <p class="div--days__p" id="QUA10"></p>
+                        <p class="div--days__p" id="QUI10"></p>
+                        <p class="div--days__p" id="SEX10"></p>
+                        <p class="div--days__p" id="SAB10"></p>
+                        <p class="div--days__p" id="DOM10"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">11:00</p>
+                        <p class="div--days__p" id="TER11"></p>
+                        <p class="div--days__p" id="QUA11"></p>
+                        <p class="div--days__p" id="QUI11"></p>
+                        <p class="div--days__p" id="SEX11"></p>
+                        <p class="div--days__p" id="SAB11"></p>
+                        <p class="div--days__p" id="DOM11"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">12:00</p>
+                        <p class="div--days__p unavailable"></p>
+                        <p class="div--days__p unavailable"></p>
+                        <p class="div--days__p unavailable"></p>
+                        <p class="div--days__p unavailable"></p>
+                        <p class="div--days__p unavailable"></p>
+                        <p class="div--days__p unavailable"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">13:00</p>
+                        <p class="div--days__p" id="TER13"></p>
+                        <p class="div--days__p" id="QUA13"></p>
+                        <p class="div--days__p" id="QUI13"></p>
+                        <p class="div--days__p" id="SEX13"></p>
+                        <p class="div--days__p" id="SAB13"></p>
+                        <p class="div--days__p" id="DOM13"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">14:00</p>
+                        <p class="div--days__p" id="TER14"></p>
+                        <p class="div--days__p" id="QUA14"></p>
+                        <p class="div--days__p" id="QUI14"></p>
+                        <p class="div--days__p" id="SEX14"></p>
+                        <p class="div--days__p" id="SAB14"></p>
+                        <p class="div--days__p" id="DOM14"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">15:00</p>
+                        <p class="div--days__p" id="TER15"></p>
+                        <p class="div--days__p" id="QUA15"></p>
+                        <p class="div--days__p" id="QUI15"></p>
+                        <p class="div--days__p" id="SEX15"></p>
+                        <p class="div--days__p" id="SAB15"></p>
+                        <p class="div--days__p" id="DOM15"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">16:00</p>
+                        <p class="div--days__p" id="TER16"></p>
+                        <p class="div--days__p" id="QUA16"></p>
+                        <p class="div--days__p" id="QUI16"></p>
+                        <p class="div--days__p" id="SEX16"></p>
+                        <p class="div--days__p" id="SAB16"></p>
+                        <p class="div--days__p" id="DOM16"></p>
+                    </div>
+                </div>
+                <div class="dates__frame">
+                    <div class="dates__frame__div--days-hours">
+                        <p class="div--days__p">17:00</p>
+                        <p class="div--days__p" id="TER17"></p>
+                        <p class="div--days__p" id="QUA17"></p>
+                        <p class="div--days__p" id="QUI17"></p>
+                        <p class="div--days__p" id="SEX17"></p>
+                        <p class="div--days__p" id="SAB17"></p>
+                        <p class="div--days__p" id="DOM17"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="dates__agend--mobile">
+                <h3 class="agend--mobile__h3">Esta semana</h3>
+                <div class="agend--mobile__dates">
+                    <button class="agend--mobile__dates__btn">11/09</button>
+                    <button class="agend--mobile__dates__btn">12/09</button>
+                    <button class="agend--mobile__dates__btn">13/09</button>
+                    <button class="agend--mobile__dates__btn">14/09</button>
+                    <button class="agend--mobile__dates__btn">15/09</button>
+                    <button class="agend--mobile__dates__btn">16/09</button>
+                    <button class="agend--mobile__dates__btn">17/09</button>
+                </div>
+            </div>
+        </section>
+        <section class="main__follow" id="instagramSection">
+            <img class="follow__img follow__img--1" src="" alt="">
+            <img class="follow__img follow__img--2" src="" alt="">
+            <img class="follow__img follow__img--3" src="" alt="">
+            <div class="follow__div">
+                <ion-icon class="follow__icon" name="logo-instagram"></ion-icon>
+                <a class="follow__a" href="https://www.instagram.com/lio.hairstyle">lio.hairstyle</a>
+            </div>
+        </section>
+        <footer class="main__footer">
+            <a class="footer__a" href="#main"><i class="bi bi-chevron-double-up"></i></a>
+        </footer>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="src/pages/home/script.js"></script>
+    <script type="module" src="src/components/header/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="src/components/buttons/burgerBtn/burgerBtn.js"></script>
+    <script type="module" src="src/components/loading/loading.js"></script>
+    <script type="module" src="src/script/mobile-config/mobile-config.js"></script>
+    <script type="module" src="src/pages/dates/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
