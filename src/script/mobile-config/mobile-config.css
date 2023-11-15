@@ -49,6 +49,9 @@
         padding-right: 20px;
         z-index: 6;
     }
+    .header__a.mobileNav__a {
+        margin-right: 0px;
+    }
     .main__mobileNav {
         visibility: visible;
     }
