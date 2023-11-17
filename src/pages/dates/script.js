@@ -62,11 +62,16 @@ nomesDosDiasDaSemana.forEach(element => {
     let unsubscribe = onSnapshot(q, (querySnapshot) => {
         querySnapshot.forEach((doc) => {
             let days_p = document.getElementById(`${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
+            let mobileDays_p = document.getElementById(`MOB${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
             days_p.classList.remove("closed")
+            mobileDays_p.classList.remove("closed")
             if (doc.data().agended == true || doc.data().closed == true) {
                 days_p.classList.add("closed")
+                mobileDays_p.textContent = "Fechado"
+                mobileDays_p.classList.add("closed")
             } else {
                 days_p.classList.remove("closed")
+                mobileDays_p.classList.remove("closed")
             }
         });
     });
@@ -76,11 +81,16 @@ nomesDosDiasDaSemana.forEach(element => {
     let unsubscribe = onSnapshot(q, (querySnapshot) => {
         querySnapshot.forEach((doc) => {
             let days_p = document.getElementById(`${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
+            let mobileDays_p = document.getElementById(`MOB${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
             days_p.classList.remove("closed")
+            mobileDays_p.classList.remove("closed")
             if (doc.data().agended == true || doc.data().closed == true) {
                 days_p.classList.add("closed")
+                mobileDays_p.textContent = "Fechado"
+                mobileDays_p.classList.add("closed")
             } else {
                 days_p.classList.remove("closed")
+                mobileDays_p.classList.remove("closed")
             }
         });
     });
@@ -91,11 +101,16 @@ nomesDosDiasDaSemana.forEach(element => {
     let unsubscribe = onSnapshot(q, (querySnapshot) => {
         querySnapshot.forEach((doc) => {
             let days_p = document.getElementById(`${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
+            let mobileDays_p = document.getElementById(`MOB${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
             days_p.classList.remove("closed")
+            mobileDays_p.classList.remove("closed")
             if (doc.data().agended == true || doc.data().closed == true) {
                 days_p.classList.add("closed")
+                mobileDays_p.textContent = "Fechado"
+                mobileDays_p.classList.add("closed")
             } else {
                 days_p.classList.remove("closed")
+                mobileDays_p.classList.remove("closed")
             }
         });
     });
@@ -105,11 +120,16 @@ nomesDosDiasDaSemana.forEach(element => {
     let unsubscribe = onSnapshot(q, (querySnapshot) => {
         querySnapshot.forEach((doc) => {
             let days_p = document.getElementById(`${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
+            let mobileDays_p = document.getElementById(`MOB${element.replace("á", "a").slice(0, 3).toUpperCase()}${doc.id.replace(":00", "")}`)
             days_p.classList.remove("closed")
+            mobileDays_p.classList.remove("closed")
             if (doc.data().agended == true || doc.data().closed == true) {
                 days_p.classList.add("closed")
+                mobileDays_p.textContent = "Fechado"
+                mobileDays_p.classList.add("closed")                
             } else {
                 days_p.classList.remove("closed")
+                mobileDays_p.classList.remove("closed")
             }
         });
     });

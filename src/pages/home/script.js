@@ -1,6 +1,34 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, onSnapshot, addDoc, collection, updateDoc, deleteField, query, where, getDocs, deleteDoc, getDoc, arrayUnion, arrayRemove, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+import { getStorage, ref, uploadString, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js";
+const firebaseConfig = {
+    apiKey: `${import.meta.env.VITE_API_KEY}`,
+    authDomain: `${import.meta.env.VITE_AUTH_DOMAIN}`,
+    projectId: `${import.meta.env.VITE_PROJECT_ID}`,
+    storageBucket: `${import.meta.env.VITE_STORAGE_BUCKET}`,
+    messagingSenderId: `${import.meta.env.VITE_MESSAGING_SENDER_ID}`,
+    appId: `${import.meta.env.VITE_APP_ID}`,
+    measurementId: `${import.meta.env.VITE_MEASUREMENT_ID}`
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const analytics = getAnalytics(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
+
 let text = "Deixe reluzir a sua melhor versão"
 let homeText = document.getElementById("homeText")
 let i = 0
+
+const docRef = doc(db, "AllData", "Data");
+const docSnap = await getDoc(docRef);
+if (docSnap.exists()) {
+    text = `${docSnap.data().Intro}`
+} else {
+    text = "Deixe reluzir a sua melhor versão"
+}
 
 function detectar_mobile() {
     var check = false; //wrapper no check
@@ -33,5 +61,6 @@ function writeText() {
         homeText.innerHTML = `${text}`
     }
 }
-
-writeText()
+setTimeout(() => {    
+        writeText()
+}, 500);
