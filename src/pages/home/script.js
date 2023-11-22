@@ -27,8 +27,14 @@ window.addEventListener("load", async() => {
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
         text = `${docSnap.data().Intro}`
+        setTimeout(() => {
+            writeText()
+        }, 500);
     } else {
         text = "Deixe reluzir a sua melhor versão"
+        setTimeout(() => {
+            writeText()
+        }, 500);
     }
 })
 
@@ -63,6 +69,3 @@ function writeText() {
         homeText.innerHTML = `${text}`
     }
 }
-setTimeout(() => {
-    writeText()
-}, 500);
