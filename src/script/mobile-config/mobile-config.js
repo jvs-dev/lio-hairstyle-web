@@ -24,51 +24,53 @@ function detectar_mobile() {
     return check;
 }
 
-if (detectar_mobile() == true) {
-    let homeImg = document.getElementById("homeImg")
-    const docRef = doc(db, "AllData", "Data");
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-        homeImg.src = `${docSnap.data().MobileCover}`
-        let loadingSection = document.getElementById("loadingSection")
-        setTimeout(() => {
-            loadingSection.style.opacity = "0"
+window.addEventListener("load", async () => {
+    if (detectar_mobile() == true) {
+        let homeImg = document.getElementById("homeImg")
+        const docRef = doc(db, "AllData", "Data");
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            homeImg.src = `${docSnap.data().MobileCover}`
+            let loadingSection = document.getElementById("loadingSection")
             setTimeout(() => {
-                loadingSection.style.display = "none"
+                loadingSection.style.opacity = "0"
+                setTimeout(() => {
+                    loadingSection.style.display = "none"
+                }, 1000);
             }, 1000);
-        }, 1000);
 
+        } else {
+            homeImg.src = "assets/pexels-tony-clay-933949.jpg"
+            setTimeout(() => {
+                loadingSection.style.opacity = "0"
+                setTimeout(() => {
+                    loadingSection.style.display = "none"
+                }, 1000);
+            }, 1000);
+        }
     } else {
-        homeImg.src = "assets/pexels-tony-clay-933949.jpg"
-        setTimeout(() => {
-            loadingSection.style.opacity = "0"
+        let homeImg = document.getElementById("homeImg")
+        const docRef = doc(db, "AllData", "Data");
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            homeImg.src = `${docSnap.data().Cover}`
             setTimeout(() => {
-                loadingSection.style.display = "none"
+                loadingSection.style.opacity = "0"
+                setTimeout(() => {
+                    loadingSection.style.display = "none"
+                }, 1000);
             }, 1000);
-        }, 1000);
+        } else {
+            homeImg.src = "assets/pexels-tony-clay-933949.jpg"
+            setTimeout(() => {
+                loadingSection.style.opacity = "0"
+                setTimeout(() => {
+                    loadingSection.style.display = "none"
+                }, 1000);
+            }, 1000);
+        }
     }
-} else {
-    let homeImg = document.getElementById("homeImg")
-    const docRef = doc(db, "AllData", "Data");
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-        homeImg.src = `${docSnap.data().Cover}`
-        setTimeout(() => {
-            loadingSection.style.opacity = "0"
-            setTimeout(() => {
-                loadingSection.style.display = "none"
-            }, 1000);
-        }, 1000);
-    } else {
-        homeImg.src = "assets/pexels-tony-clay-933949.jpg"
-        setTimeout(() => {
-            loadingSection.style.opacity = "0"
-            setTimeout(() => {
-                loadingSection.style.display = "none"
-            }, 1000);
-        }, 1000);
-    }
-}
+})
 
 let agendArticle = document.querySelectorAll(".agend--mobile__dates__article")
 agendArticle.forEach(element => {

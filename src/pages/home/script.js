@@ -22,13 +22,15 @@ let text = "Deixe reluzir a sua melhor versão"
 let homeText = document.getElementById("homeText")
 let i = 0
 
-const docRef = doc(db, "AllData", "Data");
-const docSnap = await getDoc(docRef);
-if (docSnap.exists()) {
-    text = `${docSnap.data().Intro}`
-} else {
-    text = "Deixe reluzir a sua melhor versão"
-}
+window.addEventListener("load", async() => {
+    const docRef = doc(db, "AllData", "Data");
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+        text = `${docSnap.data().Intro}`
+    } else {
+        text = "Deixe reluzir a sua melhor versão"
+    }
+})
 
 function detectar_mobile() {
     var check = false; //wrapper no check
@@ -61,6 +63,6 @@ function writeText() {
         homeText.innerHTML = `${text}`
     }
 }
-setTimeout(() => {    
-        writeText()
+setTimeout(() => {
+    writeText()
 }, 500);
