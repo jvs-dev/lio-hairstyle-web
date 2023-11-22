@@ -17,6 +17,8 @@ const auth = getAuth();
 const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
+
+let text = ""
 let homeText = document.getElementById("homeText")
 let i = 0
 
